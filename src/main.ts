@@ -10,6 +10,8 @@ async function bootstrap() {
       'https://todomvc-i2at.onrender.com',
       'https://jiahongl.github.io',
       'http://localhost:4200',
+      'https://localhost:4200',
+      'http://localhost:4000'
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Accept',
