@@ -3,7 +3,39 @@ import { Todo } from './todo.model';
 
 @Injectable()
 export class TodosService {
-    private todos: Todo[] = [];
+
+    private todos: Todo[] = [
+        {
+            id: '1',
+            completed: false,
+            text: '代辦事項一'
+        },
+        {
+            id: '2',
+            completed: true,
+            text: '代辦事項二'
+        },
+        {
+            id: '3',
+            completed: false,
+            text: '代辦事項三'
+        },
+        {
+            id: '4',
+            completed: true,
+            text: '代辦事項四'
+        },
+        {
+            id: '5',
+            completed: true,
+            text: '代辦事項五'
+        },
+        {
+            id: '6',
+            completed: true,
+            text: '代辦事項六'
+        }
+    ];
 
     private generateGUID() {
         const s4 = () => Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
