@@ -5,7 +5,14 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api'); // 設置全局路徑前綴
-  app.enableCors(); // 啟用跨域請求
+  app.enableCors({
+    origin: [
+      'https://todomvc-i2at.onrender.com',
+      // 'https://jiahongl.github.io'
+    ],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type, Accept',
+  }); // 啟用跨域請求
 
   const config = new DocumentBuilder()
     .setTitle('Cats example')
