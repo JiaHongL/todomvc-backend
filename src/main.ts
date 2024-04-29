@@ -8,7 +8,8 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'https://todomvc-i2at.onrender.com',
-      // 'https://jiahongl.github.io'
+      'https://jiahongl.github.io',
+      'http://localhost:4200',
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Accept',
