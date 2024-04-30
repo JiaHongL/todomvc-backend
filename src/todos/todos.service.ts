@@ -8,32 +8,32 @@ export class TodosService {
         {
             id: '1',
             completed: false,
-            text: '代辦事項一'
+            text: '待辦事項一'
         },
         {
             id: '2',
             completed: true,
-            text: '代辦事項二'
+            text: '待辦事項二'
         },
         {
             id: '3',
             completed: false,
-            text: '代辦事項三'
+            text: '待辦事項三'
         },
         {
             id: '4',
             completed: true,
-            text: '代辦事項四'
+            text: '待辦事項四'
         },
         {
             id: '5',
             completed: true,
-            text: '代辦事項五'
+            text: '待辦事項五'
         },
         {
             id: '6',
             completed: true,
-            text: '代辦事項六'
+            text: '待辦事項六'
         }
     ];
 
