@@ -20,10 +20,9 @@ async function bootstrap() {
   }); // 啟用跨域請求
 
   const config = new DocumentBuilder()
-    .setTitle('Cats example')
+    .setTitle('Todomvc example')
     .setDescription('這是一組用來練習前端 CRUD 操作的 APIs，使用 Nest.js 框架建立。')
     .setVersion('1.0')
-    .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document);

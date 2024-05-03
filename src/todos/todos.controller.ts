@@ -1,7 +1,8 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Res } from '@nestjs/common';
 import { Todo } from './todo.model';
 import { TodosService } from './todos.service';
 import { ApiBody, ApiOperation, ApiProperty, ApiResponse } from '@nestjs/swagger';
+import { Response } from 'express';
 
 export class ToDoDto {
     @ApiProperty()
@@ -120,4 +121,20 @@ export class TodosController {
         this.todosService.batchDelete(batchDeleteTodoDto.ids);
     }
 
+    @Get('random/guid')
+    @ApiOperation({ summary: '獲得隨機 GUID' })
+    @ApiResponse({
+        status: 200,
+        description: '獲取資料成功',
+        type: String
+    })
+    getRandomGUID(@Res() res: Response): void {
+        // get random GUID
+        const randomGUID = this.todosService.getRandomGUID();
+        // set Cache-Control header to prevent caching
+        res.header('Cache-Control', 'no-cache');
+        // Send the random GUID as the response
+        res.send(randomGUID);
+    }
+    
 }
