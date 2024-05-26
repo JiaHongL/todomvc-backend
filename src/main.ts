@@ -13,7 +13,8 @@ async function bootstrap() {
       'http://localhost:4200',
       'https://localhost:4200',
       'http://localhost:4000',
-      'https://localhost:4000'
+      'https://localhost:4000',
+      'http://localhost:5173'
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type, Accept',
