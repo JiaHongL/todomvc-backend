@@ -8,7 +8,7 @@ async function bootstrap() {
   app.enableCors({
     // 可以換成自己的網址，或是設置為 * 來允許所有網址
     origin: [
-      'https://todomvc-i2at.onrender.com',
+      'https://todomvc-r0e6.onrender.com',
       'https://jiahongl.github.io',
       'http://localhost:4200',
       'https://localhost:4200',
